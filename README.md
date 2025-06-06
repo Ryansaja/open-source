@@ -1,41 +1,105 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Template Open Source Next.js
 
-## Getting Started
+Proyek ini adalah template restoran berbasis [Next.js](https://nextjs.org/) yang siap dikembangkan lebih lanjut untuk kebutuhan open source. Template ini sudah terintegrasi dengan berbagai alat modern seperti TypeScript, Tailwind CSS, Zustand, dan lain-lain.
 
-First, run the development server:
+## Fitur Utama
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+- **Next.js 14**: Framework React modern untuk SSR/SSG.
+- **TypeScript**: Penulisan kode lebih aman dan terstruktur.
+- **Tailwind CSS**: Utility-first CSS framework untuk styling cepat.
+- **Zustand**: State management sederhana dan efisien.
+- **Framer Motion**: Animasi React yang powerful.
+- **Struktur Modular**: Komponen dan modul terorganisir rapi.
+- **Siap untuk Open Source**: Mudah dikembangkan dan dikontribusi.
+
+---
+
+## Persyaratan Instalasi
+
+Pastikan Anda sudah menginstal:
+
+- [Node.js](https://nodejs.org/) (disarankan versi 18+)
+- [npm](https://www.npmjs.com/) / [yarn](https://yarnpkg.com/) / [pnpm](https://pnpm.io/) (pilih salah satu)
+
+---
+
+## Langkah Instalasi
+
+1. **Clone repository:**
+   ```bash
+   git clone https://github.com/Ryansaja/open-source.git
+   cd open-source
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   # atau
+   yarn
+   # atau
+   pnpm install
+   ```
+
+3. **Jalankan server development:**
+   ```bash
+   npm run dev
+   # atau
+   yarn dev
+   # atau
+   pnpm dev
+   ```
+
+4. Buka [http://localhost:3000](http://localhost:3000) di browser Anda.
+
+---
+
+## Struktur Folder
+
+```
+src/
+  app/         # Routing & halaman utama (Next.js App Router)
+  components/  # Komponen UI & modul (modular)
+  hooks/       # Custom React hooks
+  stores/      # State management (Zustand)
+  styles/      # File styling (SCSS & Tailwind)
+  utils/       # Utility/helper functions
+public/        # File statis (gambar, favicon, dll)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Penjelasan Modul
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **app/**: Entry point aplikasi, layout, dan halaman (page.tsx, layout.tsx, dll).
+- **components/modules/**: Komponen modular seperti `CardFeature`, `CardTestimonial`, dan modul produk (`Product.tsx`, `TabsProduct.tsx`).
+- **stores/**: Contoh penggunaan Zustand untuk state tab menu.
+- **hooks/**: Custom hook seperti `useMediaQuery`.
+- **styles/**: Struktur SCSS dan konfigurasi Tailwind untuk styling.
+- **utils/**: Utility kecil, misal props helper.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+---
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Konfigurasi Penting
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **TypeScript**: Lihat `tsconfig.json` untuk path alias dan strict mode.
+- **Tailwind CSS**: Lihat `tailwind.config.js` untuk custom color dan konfigurasi content.
+- **Next.js**: Lihat `next.config.js` untuk pengaturan domain gambar.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Cara Kontribusi
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Fork repo ini.
+2. Buat branch baru untuk fitur/bugfix Anda.
+3. Commit perubahan dan push ke branch Anda.
+4. Buat Pull Request ke repo utama.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Lisensi
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Proyek ini open source dengan lisensi [MIT](LICENSE).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# open-source
-# projek-open-source
-# open-source
+---
+
+## Kontak & Dukungan
+
+Silakan buat issue di GitHub untuk pertanyaan, bug, atau saran fitur.
