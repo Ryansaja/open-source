@@ -14,7 +14,7 @@ export default function Contact() {
         <div className="lg:flex lg:items-center lg:-mx-6">
           <div className="lg:w-1/2 lg:mx-6">
             <h2 className="text-center lg:text-left text-neutral-100 heading-second">
-              <span className="text-primary-500">Contact us</span> <br /> for
+              <span className="text-neutral-900 dark:text-neutral-100">Contact us</span> <br /> for
               more info
             </h2>
 
@@ -22,7 +22,7 @@ export default function Contact() {
               <div className="flex items-start gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="hidden w-6 h-6 lg:block text-primary-500"
+                  className="hidden w-6 h-6 lg:block text-neutral-900 dark:text-neutral-100"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -42,21 +42,21 @@ export default function Contact() {
 
                 <div className="flex flex-col gap-2 text-center lg:text-left">
                   <span className="truncate w-72 text-neutral-400">
-                    1234 Ipsum Street
+                    Jl. Pemuda No. 123
                   </span>
                   <span className="truncate w-72 text-neutral-400">
-                    Loremville, Ipsumia 56789
+                    Semarang, Jawa Tengah 50132
                   </span>
                   <span className="truncate w-72 text-neutral-400">
-                    Consectetur Adipiscing Elite.
+                    Indonesia
                   </span>
                 </div>
               </div>
 
-              <div className="flex items-center justify-center gap-2">
+              <div className="flex items-start gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-5 h-5 text-primary-500 "
+                  className="hidden w-6 h-6 lg:block text-neutral-900 dark:text-neutral-100"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -68,18 +68,21 @@ export default function Contact() {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                <Link
-                  className="truncate text-neutral-400"
-                  href={"tel:1234567890"}
-                >
-                  (123) 456-7890
-                </Link>
+
+                <div className="flex flex-col gap-2 text-center lg:text-left">
+                  <span className="truncate w-72 text-neutral-400">
+                    +62 24 1234 5678
+                  </span>
+                  <span className="truncate w-72 text-neutral-400">
+                    +62 812 3456 7890
+                  </span>
+                </div>
               </div>
 
-              <div className="flex items-center justify-center gap-2">
+              <div className="flex items-start gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-5 h-5 text-primary-500 "
+                  className="hidden w-6 h-6 lg:block text-neutral-900 dark:text-neutral-100"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -92,12 +95,14 @@ export default function Contact() {
                   />
                 </svg>
 
-                <Link
-                  className="truncate w-fit text-neutral-400"
-                  href={"mailto:contact@loremipsum.com"}
-                >
-                  contact@loremipsum.com
-                </Link>
+                <div className="flex flex-col gap-2 text-center lg:text-left">
+                  <span className="truncate w-72 text-neutral-400">
+                    info@sixteen8.com
+                  </span>
+                  <span className="truncate w-72 text-neutral-400">
+                    reservation@sixteen8.com
+                  </span>
+                </div>
               </div>
             </address>
 
@@ -106,9 +111,9 @@ export default function Contact() {
                 Follow us
               </p>
               <div className="flex items-center justify-center gap-2 lg:justify-start">
-                <SocialLink variant="facebook" url="https://facebook.com/" />
-                <SocialLink variant="instagram" url="https://instagram.com/" />
-                <SocialLink variant="twitter" url="https://twitter.com/" />
+                <SocialLink variant="facebook" url="https://facebook.com/sixteen8semarang" />
+                <SocialLink variant="instagram" url="https://instagram.com/sixteen8semarang" />
+                <SocialLink variant="twitter" url="https://twitter.com/sixteen8semarang" />
               </div>
             </section>
           </div>
@@ -117,7 +122,7 @@ export default function Contact() {
             <div className="mt-8 lg:w-1/2 lg:mx-6">
               <iframe
                 className="w-full"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5990.566373508373!2d14.543439619481877!3d53.42631447644446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47aa093800d3a759%3A0xa95adc4e5f8ac4f3!2sSzczecin!5e0!3m2!1spl!2spl!4v1705360290393!5m2!1spl!2spl"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.1234567890123!2d110.42000000000001!3d-6.987654321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b4e3f0f0123%3A0x1234567890abcdef!2sSixteen%208%20Restaurant!5e0!3m2!1sid!2sid!4v1234567890!5m2!1sid!2sid"
                 width="800"
                 height="600"
                 style={{ border: 0 }}

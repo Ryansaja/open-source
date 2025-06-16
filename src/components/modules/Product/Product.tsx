@@ -20,7 +20,7 @@ export default function Product({
     <section className="gap-8 lg:gap-16 lg:flex lg:items-center">
       <div className="lg:w-1/2 ">
         {category && (
-          <p className="mb-1 text-lg tracking-wider uppercase text-primary-500 ">
+          <p className="mb-1 text-lg tracking-wider uppercase text-neutral-900 dark:text-neutral-100">
             {category}
           </p>
         )}

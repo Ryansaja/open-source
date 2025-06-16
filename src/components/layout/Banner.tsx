@@ -14,7 +14,7 @@ export default function Banner() {
             <h2 className="mb-4 text-5xl font-brush font-semibold text-neutral-200">
               Lorem ipsum dolor
               <br />
-              <span className="text-primary-500">Sit amet</span>
+              <span className="text-neutral-900 dark:text-neutral-100">Sit amet</span>
             </h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.

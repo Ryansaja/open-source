@@ -47,11 +47,11 @@ export default function Button({
     {
       variants: {
         variant: {
-          primary: "text-white bg-primary-500 hover:bg-primary-400",
-          neutral: "bg-neutral-500 hover:bg-neutral-400",
-          outlined: "text-primary-700 hover:text-white border border-primary-700 hover:bg-primary-800 dark:border-primary-500 dark:text-primary-500 dark:hover:text-white dark:hover:bg-primary-500 dark:focus:ring-primary-800",
+          primary: "text-white bg-neutral-900 hover:bg-neutral-800 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-200",
+          neutral: "bg-neutral-900 hover:bg-neutral-800 dark:bg-neutral-100 dark:hover:bg-neutral-200",
+          outlined: "text-neutral-900 hover:text-white border border-neutral-900 hover:bg-neutral-900 dark:border-neutral-100 dark:text-neutral-100 dark:hover:text-neutral-900 dark:hover:bg-neutral-100",
           ghost:
-            "group bg-transparent-500 hover:bg-neutral-500 text-neutral-500 hover:text-neutral-500 font-bold",
+            "group bg-transparent-500 hover:bg-neutral-900 text-neutral-900 hover:text-white dark:hover:bg-neutral-100 dark:text-neutral-100 dark:hover:text-neutral-900 font-bold",
         },
         shape: {
           custom: "rounded-tl-xl rounded-br-xl",

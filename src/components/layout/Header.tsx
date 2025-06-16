@@ -59,10 +59,6 @@ export default function Header() {
                 className="flex items-center justify-center gap-2 text-2xl font-semibold text-neutral-100"
               >
                 <LogoSVG width={50} height={50} />
-                <span className="flex gap-1">
-                  <span className="text-white font-brush">Asian</span>
-                  <span className="text-primary-500 font-brush">Food</span>
-                </span>
               </Link>
               <Hamburger isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
             </div>

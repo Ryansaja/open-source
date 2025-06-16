@@ -19,10 +19,6 @@ export default function Footer() {
             className="flex items-center justify-center gap-2 text-2xl font-semibold text-neutral-100"
           >
             <LogoSVG width={50} height={50} />
-            <span className="flex gap-1">
-              <span className="text-white font-brush">Asian</span>
-              <span className="text-primary-500 font-brush">Food</span>
-            </span>
           </Link>
           <div className="flex flex-wrap items-center justify-center gap-6 mt-4 mb-6 text-neutral-900 dark:text-white">
             {links.map(({ id, title, path }) => {
@@ -34,14 +30,7 @@ export default function Footer() {
             })}
           </div>
           <span className="text-sm text-neutral-500 sm:text-center dark:text-neutral-400">
-            Created by{" "}
-            <Link
-              className="hover:underline"
-              href={"https://github.com/brozinsky"}
-            >
-              brozinsky
-            </Link>
-            {" "}© 2024 All Rights Reserved.
+            Created by Andi Andrian © 2024 All Rights Reserved.
           </span>
         </div>
       </div>

@@ -1,8 +1,10 @@
 "use client";
 import React from "react";
 import Product from "../../modules/Product/Product";
-import Ramen1 from "@/public/products/ramen/ramen-shoyu.avif";
-import Ramen2 from "@/public/products/ramen/ramen-miso.avif";
+import Image1 from "@/public/4.jpg";
+import Image2 from "@/public/3.jpg";
+import Image3 from "@/public/6.jpg";
+import Image6 from "@/public/5.jpg";
 import ScrollAnimated from "../ScrollAnimated";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
@@ -16,36 +18,34 @@ const products = [
   {
     id: 1,
     price: 38,
-    category: "ramen",
-    imgScr: Ramen1,
-    title: "Shoyu Ramen",
-    description: "Soy sauce-based broth, chicken, nori, menma, scallions",
+    category: "dimsum",
+    imgScr: Image3,
+    title: "Siomay",
+    description: "Dimsum kukus dengan isian daging dan sayuran yang lezat",
   },
   {
     id: 2,
     price: 42,
-    category: "ramen",
-    imgScr: Ramen1,
-    title: "Tonkotsu  ramen",
-    description:
-      "Rich pork broth, pork belly, soft-boiled egg, bamboo shoots, green onions",
+    category: "gurami",
+    imgScr: Image1,
+    title: "Gurami Rujak",
+    description: "Gurami yang dibaluri dengan pedasnya saus rujak",
   },
   {
     id: 3,
     price: 44,
-    category: "ramen",
-    imgScr: Ramen2,
-    title: "Miso Ramen",
-    description:
-      "Miso-based broth, ground pork, corn, butter, bean sprouts, chives",
+    category: "tofu",
+    imgScr: Image6,
+    title: "Tahu Siram Shimeji",
+    description: "Perpaduan tekstur tahu yang lembut, ditambah tumisan jamur dengan bumbu menciptakan rasa begitu spesial",
   },
   {
     id: 4,
     price: 48,
-    category: "ramen",
-    imgScr: Ramen2,
-    title: "Spicy Seafood Ramen",
-    description: "Spicy broth, mixed seafood, mushrooms, bok choy, red ginger",
+    category: "bebek",
+    imgScr: Image2,
+    title: "Bebek Panggang",
+    description: "Bebek yang dipanggang dengan bumbu khas",
   },
 ];
 

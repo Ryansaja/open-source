@@ -1,6 +1,7 @@
 import Image from "next/image";
-import Image2 from "@/public/bento/bento-2.jpg";
-import Image6 from "@/public/bento/bento-6.jpg";
+import GroundFloor from "@/public/ground floor.jpg";
+import SecondFloor from "@/public/second floor.jpg";
+import ThirdFloor from "@/public/third floor.jpg";
 
 export default function AboutExtended() {
   return (
@@ -13,7 +14,7 @@ export default function AboutExtended() {
               className="self-end w-full h-fit justify-self-end rounded-custom--lg"
               width={384}
               height={256}
-              src={Image6}
+              src={GroundFloor}
               loading="lazy"
               alt="Ground Floor Interior"
             />
@@ -55,13 +56,21 @@ export default function AboutExtended() {
               className="self-start w-full h-fit justify-self-start rounded-custom--lg"
               width={384}
               height={256}
-              src={Image2}
+              src={SecondFloor}
               loading="lazy"
               alt="Second Floor Dining Area"
             />
 
             {/* Lantai 3 */}
-            <div className="col-span-2 p-8 bg-white lg:p-16 rounded-custom--lg">
+            <Image
+              className="self-end w-full h-fit justify-self-end rounded-custom--lg"
+              width={384}
+              height={256}
+              src={ThirdFloor}
+              loading="lazy"
+              alt="Third Floor Private Area"
+            />
+            <div className="p-8 bg-white lg:p-16 rounded-custom--lg">
               <h2 className="mb-4 heading-second text-neutral-900">
                 Third Floor
               </h2>

@@ -10,6 +10,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'playfair': ['"Playfair Display"', 'serif'],
+      },
       colors: {
         "light-ivory": "#F7F6F1",
         primary: {

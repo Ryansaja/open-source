@@ -85,12 +85,11 @@ export default function Hero() {
                 as="h1"
                 delay={0.4}
                 variant={"top-sm"}
-                className="mb-4 heading-first text-neutral-200"
+                className="mb-4 text-3xl font-semibold md:text-5xl text-neutral-900 dark:text-neutral-100"
               >
                 Experience the Essence 
-                
                 <br />
-                <span className="text-primary-500"> of Chinese Culinary Heritage</span>
+                <span className="text-neutral-900 dark:text-neutral-100"> of Chinese Culinary Heritage</span>
               </Animated>
               <Animated as="p" delay={0.6} variant="top-sm">
               Nikmati perjalanan rasa yang menggugah selera melalui warisan kuliner Tiongkok dengan dim sum buatan tangan,
