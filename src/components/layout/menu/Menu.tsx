@@ -13,14 +13,14 @@ const menu = {
       title: "Siomay",
       category: "dimsum",
       description:
-        "Dimsum kukus.",
+        "Siomay adalah dimsum khas Indonesia yang terbuat dari ikan tenggiri, tahu, telur, kentang, dan kol, disajikan dengan bumbu kacang, kecap manis, sambal, dan perasan jeruk limau."
     },
     {
       id: 2,
       title: "Hakau",
       category: "dimsum",
       description:
-        "Dimsum berbentuk bulan sabit dengan kulit yang bening, berisi udang. ",
+        "Hakau adalah dimsum kukus berbentuk bulan sabit dengan kulit bening dan isian udang utuh yang juicy."
     },
     {
       id: 3,
@@ -28,7 +28,7 @@ const menu = {
       price: 35,
       category: "dimsum",
       description:
-        "Dimsum berbentuk bulat dengan isian daging atau char siu.",
+        "Bakpao adalah roti kukus lembut berisi daging ayam, kacang merah, atau char siu yang manis dan gurih."
     },
   ],
   gurami: [
@@ -36,21 +36,21 @@ const menu = {
       id: 1,
       category: "gurami",
       title: "Gurami Rujak",
-      description: "Gurami yang dibaluri dengan pedasnya saus rujak",
+      description: "Gurami goreng disiram saus rujak pedas manis khas Indonesia, segar dan menggugah selera."
     },
     {
       id: 2,
       category: "gurami",
       title: "Gurami Asam Manis",
       description:
-        "Gurami yang dibaluri dengan Saus Asam Manis",
+        "Gurami goreng renyah disajikan dengan saus asam manis segar dari nanas dan tomat."
     },
     {
       id: 3,
       category: "gurami",
       title: "Gurami Goreng Telur Asin",
       description:
-        "Gurami yang di goreng dibaluri Telor Asin",
+        "Gurami goreng krispi dibalut saus telur asin gurih dan creamy."
     },
   ],
   tofu: [
@@ -58,21 +58,21 @@ const menu = {
       id: 1,
       category: "tofu",
       title: "Tahu Siram Shimeji",
-      description: "Perpaduan tekstur tahu yang lembut, ditambah tumisan jamur dengan bumbu menciptakan rasa begitu spesial",
+      description: "Tahu lembut disiram tumisan jamur shimeji dan saus gurih, cocok untuk pecinta vegetarian."
     },
     {
       id: 2,
       category: "tofu",
       title: "Tahu Kantong",
       description:
-        "Tahu kantong harta karun adalah variasi tahu isi yang unik, dengan rasa gurih dan tekstur yang lembut. Tahu ini diisi dengan campuran bumbu dan bahan-bahan lain, lalu dikemas dalam bentuk kantong menyerupai harta karun.",
+        "Tahu isi sayuran dan daging, dibungkus seperti kantong, digoreng hingga renyah di luar dan lembut di dalam."
     },
     {
       id: 3,
       category: "tofu",
       title: "Mapo Tahu",
       description:
-        "Hidangan ini terbuat dari tahu yang dimasak dengan saus kental berbumbu khas yang kaya rempah, biasanya dilengkapi dengan daging cincang",
+        "Tahu lembut dimasak dengan saus pedas khas Sichuan dan daging cincang, kaya rasa dan aroma."
     },
   ],
   bebek: [
@@ -80,7 +80,7 @@ const menu = {
       id: 1,
       category: "bebek",
       title: "Bebek Panggang",
-      description: "Bebek yang dipanggang.",
+      description: "Bebek utuh dipanggang hingga kulitnya renyah dan dagingnya juicy, disajikan dengan saus spesial."
     },
   ],
 };
@@ -118,7 +118,6 @@ export default function Menu({ pb = "md", pt = "md" }: Props) {
               key={id}
               title={title}
               description={description}
-             
             />
           ))}
         {tab == 1 &&
@@ -127,7 +126,6 @@ export default function Menu({ pb = "md", pt = "md" }: Props) {
               key={id}
               title={title}
               description={description}
-             
             />
           ))}
         {tab == 2 &&
@@ -136,7 +134,6 @@ export default function Menu({ pb = "md", pt = "md" }: Props) {
               key={id}
               title={title}
               description={description}
-             
             />
           ))}
         {tab == 3 &&
@@ -145,7 +142,6 @@ export default function Menu({ pb = "md", pt = "md" }: Props) {
               key={id}
               title={title}
               description={description}
-             
             />
           ))}
       </div>

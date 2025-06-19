@@ -100,7 +100,9 @@ export default function Hero() {
                 <Link href="/menu#menu">
                   <Button variant="primary">Explore menu</Button>
                 </Link>
-                {/* <Button variant="outlined">Secondary</Button> */}
+                <Link href="/contact#reservation">
+                  <Button variant="outlined">Reservasi Now</Button>
+                </Link>
               </Animated>
             </div>
            

@@ -17,6 +17,7 @@ type Props = {
   size?: "md" | "sm" | null | undefined;
   isLoading?: boolean;
   label?: string;
+  textColor?: string;
 };
 
 type LoadingWrapperProps = {
@@ -38,10 +39,12 @@ export default function Button({
   shape = "custom",
   size = "md",
   label,
+  textColor,
 }: Props) {
   const classes = cva(
     [
       className,
+      textColor ? textColor : "",
       "font-medium tracking-wider relative flex items-center justify-center w-fit gap-2 cursor-pointer",
     ],
     {

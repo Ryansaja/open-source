@@ -1,24 +1,38 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import SocialLink from "../ui/SocialLink";
-import Link from "next/link";
+import Button from "../ui/Button";
 import ScrollAnimated from "./ScrollAnimated";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 export default function Contact() {
   const isMobile = useMediaQuery(`(max-width: 768px)`);
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    datetime: "",
+    people: "",
+    description: ""
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const message = `Halo, saya ingin reservasi:%0A%0ANama: ${formData.name}%0ANomor Ponsel: ${formData.phone}%0ATanggal & Waktu: ${formData.datetime}%0AJumlah Orang: ${formData.people}%0ADeskripsi: ${formData.description}`;
+    window.open(`https://wa.me/6281283104375?text=${message}`, '_blank');
+  };
 
   return (
     <section id="Contact" className="bg-neutral-900 py-section">
       <ScrollAnimated className="container container--sm">
-        <div className="lg:flex lg:items-center lg:-mx-6">
-          <div className="lg:w-1/2 lg:mx-6">
-            <h2 className="text-center lg:text-left text-neutral-100 heading-second">
+        <div className="lg:grid lg:grid-cols-2 lg:gap-12">
+          {/* Contact Info & Map Column */}
+          <div>
+            <h2 className="text-center lg:text-left text-neutral-100 heading-second mb-8">
               <span className="text-neutral-900 dark:text-neutral-100">Contact us</span> <br /> for
               more info
             </h2>
 
-            <address className="flex flex-col items-center mt-6 space-y-8 lg:items-start lg:items-left lg:mt-8">
+            <address className="flex flex-col items-center mt-6 space-y-8 lg:items-start">
               <div className="flex items-start gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -71,10 +85,7 @@ export default function Contact() {
 
                 <div className="flex flex-col gap-2 text-center lg:text-left">
                   <span className="truncate w-72 text-neutral-400">
-                    +62 24 1234 5678
-                  </span>
-                  <span className="truncate w-72 text-neutral-400">
-                    +62 812 3456 7890
+                    +62 812 8310 4375
                   </span>
                 </div>
               </div>
@@ -106,7 +117,7 @@ export default function Contact() {
               </div>
             </address>
 
-            <section className="mt-6 ">
+            <section className="mt-6">
               <p className="mb-2 text-center lg:text-left text-neutral-300">
                 Follow us
               </p>
@@ -116,22 +127,106 @@ export default function Contact() {
                 <SocialLink variant="twitter" url="https://twitter.com/sixteen8semarang" />
               </div>
             </section>
+
+            {!isMobile && (
+              <div className="mt-8">
+                <iframe
+                  className="w-full"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.1234567890123!2d110.42000000000001!3d-6.987654321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b4e3f0f0123%3A0x1234567890abcdef!2sSixteen%208%20Restaurant!5e0!3m2!1sid!2sid!4v1234567890!5m2!1sid!2sid"
+                  width="100%"
+                  height="300"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            )}
           </div>
 
-          {!isMobile && (
-            <div className="mt-8 lg:w-1/2 lg:mx-6">
-              <iframe
-                className="w-full"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.1234567890123!2d110.42000000000001!3d-6.987654321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b4e3f0f0123%3A0x1234567890abcdef!2sSixteen%208%20Restaurant!5e0!3m2!1sid!2sid!4v1234567890!5m2!1sid!2sid"
-                width="800"
-                height="600"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          )}
+          {/* Reservation Form Column */}
+          <div id="reservation" className="mt-12 lg:mt-0">
+            <h2 className="text-center lg:text-left text-neutral-100 heading-second mb-8">
+              Make a <span className="text-neutral-900 dark:text-neutral-100">Reservation</span>
+            </h2>
+            
+            <form className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-neutral-400">
+                  Nama
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  required
+                  className="mt-1 block w-full px-3 py-2 bg-neutral-800 border border-neutral-700 rounded-md text-neutral-100 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-600"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                />
+              </div>
+
+              <div>
+                <label htmlFor="phone" className="block text-sm font-medium text-neutral-400">
+                  Nomor Ponsel
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  required
+                  className="mt-1 block w-full px-3 py-2 bg-neutral-800 border border-neutral-700 rounded-md text-neutral-100 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-600"
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                />
+              </div>
+
+              <div>
+                <label htmlFor="datetime" className="block text-sm font-medium text-neutral-400">
+                  Tanggal dan Waktu
+                </label>
+                <input
+                  type="datetime-local"
+                  id="datetime"
+                  required
+                  className="mt-1 block w-full px-3 py-2 bg-neutral-800 border border-neutral-700 rounded-md text-neutral-100 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-600"
+                  value={formData.datetime}
+                  onChange={(e) => setFormData({ ...formData, datetime: e.target.value })}
+                />
+              </div>
+
+              <div>
+                <label htmlFor="people" className="block text-sm font-medium text-neutral-400">
+                  Jumlah Orang
+                </label>
+                <input
+                  type="number"
+                  id="people"
+                  required
+                  min="1"
+                  className="mt-1 block w-full px-3 py-2 bg-neutral-800 border border-neutral-700 rounded-md text-neutral-100 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-600"
+                  value={formData.people}
+                  onChange={(e) => setFormData({ ...formData, people: e.target.value })}
+                />
+              </div>
+
+              <div>
+                <label htmlFor="description" className="block text-sm font-medium text-neutral-400">
+                  Deskripsi (Opsional)
+                </label>
+                <textarea
+                  id="description"
+                  rows={3}
+                  className="mt-1 block w-full px-3 py-2 bg-neutral-800 border border-neutral-700 rounded-md text-neutral-100 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-600"
+                  value={formData.description}
+                  onChange={(e) => setFormData({ ...formData, description: e.target.value })}
+                  placeholder="Tambahan informasi (misal: preferensi tempat duduk, alergi, dll)"
+                ></textarea>
+              </div>
+
+              <Button onClick={handleSubmit} className="w-full" textColor="text-black">
+                Reservasi via WhatsApp
+              </Button>
+            </form>
+          </div>
         </div>
       </ScrollAnimated>
     </section>
